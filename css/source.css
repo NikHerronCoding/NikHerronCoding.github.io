@@ -100,4 +100,11 @@ footer {
 
 footer span, footer a {
     margin: 2rem;
+    font-size:1rem;
+}
+
+footer span:hover, footer a:hover {
+    margin: 2rem;
+    font-size: 1.25rem;
+
 }
