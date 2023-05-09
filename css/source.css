@@ -33,6 +33,7 @@ nav {
     color: hsl(51, 24%, 89%);
     display: flex;
     justify-content: space-between;
+    align-items:center;
 }
 nav img {
     width: 4rem;
@@ -71,9 +72,14 @@ main {
     border-right:rgb(23, 23, 24);
     margin-top:0;
 }
-h1  {
+main h1  {
     margin-top: 2rem;
     font-size:4rem;
+}
+
+main h2 {
+    margin: 2rem;
+    font-size: 2rem;
 }
 
 main span {
