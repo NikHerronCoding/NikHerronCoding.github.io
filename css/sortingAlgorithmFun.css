@@ -1,0 +1,32 @@
+
+h1 {
+    margin: 2rem;
+    font-size:4rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arrayContainer {
+    height: 10rem;
+    width: 40rem;
+    background-color: lightgray;
+    display: flex;
+    align-items:end;
+    justify-content: space-around;
+}
+
+.arrayContainer div {
+    background-color: blue;
+    height: 100px;
+    width: 30px;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.arrayContainer div:hover {
+    border: solid 5px yellow;
+}
