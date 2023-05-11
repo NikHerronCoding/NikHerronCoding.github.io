@@ -10,16 +10,16 @@ body {
     align-items: center;
 }
 
-.arrayContainer {
-    height: 10rem;
-    width: 40rem;
-    background-color: lightgray;
+#arrayContainer {
+    height: 15rem;
+    width: 45rem;
+    background-color:gray;
     display: flex;
     align-items:end;
     justify-content: space-around;
 }
 
-.arrayContainer div {
+#arrayContainer div {
     background-color: blue;
     height: 100px;
     width: 30px;
@@ -29,4 +29,12 @@ body {
 
 .arrayContainer div:hover {
     border: solid 5px yellow;
+}
+
+.button{
+    color: white;
+    background-color: grey;
+    border: 2px solid black;
+    width: 8rem;
+    margin: 1rem;
 }
