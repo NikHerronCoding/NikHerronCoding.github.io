@@ -159,19 +159,20 @@ class SortingArray{
     }
 
     selectionSort() {
+        this.numComparisons = 0;
+        this.numSwaps = 0;
         let numPasses = 0;
         var max;
         for (let j = 0; j < this.array.length; j++) {
 
-        
-            for (let i = 0; i < this.array.length -numPasses; i++) {
-                let max = 0;
-                if (this.compare(max, i) > 0) {
+            max = 0;
+            for (let i = 0; i < (this.array.length -numPasses); i++) {              
+                if (this.compare(i, max) < 0) {
                     max = i;
                 }
             }
             numPasses++;
-            this.swap(max, (this.array.length - numPasses - 1));
+            this.swap(max, (this.array.length - numPasses));
         }
     }
 }
@@ -215,6 +216,7 @@ quickSortReset.addEventListener('click', () => {
     quickSortArray.render("quickContainer");
 });
 
+
 //selection sort dom modification
 let selectionSortArray = new SortingArray(SortingArray.numEles);
 selectionSortArray.render("selectionContainer");
@@ -222,23 +224,22 @@ let selectionSortButton = document.getElementById('selectionSortButton');
 let selectionSortReset = document.getElementById('selectionSortReset');
 
 selectionSortButton.addEventListener('click', () => {
-    let selectionStartTime = new Date();
+    let startTime = new Date();
     
-    selectionSortArray.selectionSort(0,SortingArray.numEles);
-    console.log(selectionSortArray);
+    selectionSortArray.selectionSort();
     selectionSortArray.render("selectionContainer");
-    quickSortArray.render("quickContainer");
-    let selectionEndTime = new Date();
-    let selectionTimeDiff = selectionEndTime - selectionStartTime; 
+    endTime = new Date();
+    timeDiff = endTime - startTime; 
 
-    let selectionTimeEle = document.getElementById('selectionSortTime');
-    let selectionNumCompareEle = document.getElementById('selectionSortnumComparisons');
-    let selectionNumSwapEle = document.getElementById('selectionSortNumSwaps');
+    let timeEle = document.getElementById('selectionSortTime');
+    let numCompareEle = document.getElementById('selectionSortnumComparisons');
+    let numSwapEle = document.getElementById('selectionSortNumSwaps');
 
-    selectionTimeEle.innerHTML = `Time: ${timeDiff} miliseconds`;
-    selectionNumCompareEle.innerHTML = `Number of Comparisons: ${selectionSortArray.numComparisons}`;
-    selectionNumSwapEle.innerHTML = `Number of swapped values ${selectionSortArray.numSwaps}`;
+    timeEle.innerHTML = `Time: ${timeDiff} miliseconds`;
+    numCompareEle.innerHTML = `Number of Comparisons: ${selectionSortArray.numComparisons}`;
+    numSwapEle.innerHTML = `Number of swapped values ${selectionSortArray.numSwaps}`;
 });
+
 selectionSortReset.addEventListener('click', () => {
     selectionSortArray = new SortingArray(SortingArray.numEles);
     selectionSortArray.render("selectionContainer");
