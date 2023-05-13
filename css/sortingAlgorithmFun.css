@@ -10,7 +10,7 @@ body {
     align-items: center;
 }
 
-#arrayContainer {
+.arrayContainer {
     height: 15rem;
     width: 45rem;
     background-color:gray;
@@ -19,7 +19,7 @@ body {
     justify-content: space-around;
 }
 
-#arrayContainer div {
+.arrayContainer div {
     background-color: blue;
     height: 100px;
     width: 30px;
@@ -27,9 +27,6 @@ body {
     margin-bottom: 0.5rem;
 }
 
-.arrayContainer div:hover {
-    border: solid 5px yellow;
-}
 
 .button{
     color: white;

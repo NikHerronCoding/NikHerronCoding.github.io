@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <title>Sorting Algorithm Fun</title>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/sortingAlgorithmFun.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/source.css'>
     
 </head>
 <body>
+    <nav> 
+        <a href="./index.html"> <img src="../files/Nikolas Herron.png"></a>
+        <ul>
+          <li>
+            <a href="./files/resume.pdf" target="_blank">Resume</a>
+          </li>
+          <li>
+             <a href="./html/portfolioProjects.html">Portfolio Projects</a> 
+          </li>
+          <li>
+            <a>Contact Me</a>
+          </li>
+    
+          <li>
+            <a> Coding Samples</a>
+          </li>
+        </ul>
+      </nav>
+
     <h1>Sorting Algorithm Fun</h1>
     <div id="bubbleSort">
         <h2>Bubble Sort</h2>
         <p>Time Complexity Average Case: 0(N^2)</p>
-        <div id="arrayContainer">
+        <div id="bubbleContainer" class = "arrayContainer">
             <!-- this is where the bubble sort array elements will go  -->
         </div>
         <p id="bubbleSortnumComparisons">Num Comparisons: n/a</p>
@@ -22,9 +40,42 @@
         <div class="button" id="bubbleSortButton"> Run Bubble Sort</div>
         <div class="button" id="bubbleSortReset"> Reset</div>
     </div>
+
+    <div id="selectionSort">
+        <h2>Selection Sort</h2>
+        <p>Time Complexity Average Case: 0(N^2)</p>
+        <div id="selectionContainer" class = "arrayContainer">
+            <!-- this is where the selection sort array elements will go  -->
+        </div>
+        <p id="selectionSortnumComparisons">Num Comparisons: n/a</p>
+        <p id="selectionSortNumSwaps">Num swaps: n/a</p>
+        <p id="selectionSortTime">Time: n/a </p>
+        <div class="button" id="selectionSortButton"> Run Selection Sort</div>
+        <div class="button" id="selectionSortReset"> Reset</div>
+    </div>
+
+    <div id="quickSort">
+        <h2>QuickSort</h2>
+        <p>Time Complexity Average Case: N * Log(N)</p>
+        <div id="quickContainer" class = "arrayContainer">
+            <!-- this is where the QuickSort sort array elements will go  -->
+        </div>
+        <p id="quickSortnumComparisons">Num Comparisons: n/a</p>
+        <p id="quickSortNumSwaps">Num swaps: n/a</p>
+        <p id="quickSortTime">Time: n/a </p>
+        <div class="button" id="quickSortButton"> Run QuickSort</div>
+        <div class="button" id="quickSortReset"> Reset</div>
+    </div>
 </body>
 
+<footer>
+
+    <span>©2023 Nik Herron</span>
+    <a>Back to Top</a>
+  </footer>
+
 <foot> 
+    
     <script src="../js/sortingAlgorithmFun.js"></script>
         
 </foot>
